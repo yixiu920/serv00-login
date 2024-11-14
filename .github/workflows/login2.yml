@@ -34,4 +34,4 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID1 }}
           ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON1 }}
         run: |
-          python login_script.py
+          python login_script1.py
