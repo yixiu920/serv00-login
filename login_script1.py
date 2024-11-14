@@ -93,11 +93,11 @@ async def main():
 
         now_beijing = format_to_iso(datetime.utcnow() + timedelta(hours=8))
         if is_logged_in:
-            message += f"✅*{serviceName}*账号 *{username}* 于北京时间 {now_beijing}登录面板成功！\n\n"
+            message += f"✅*{serviceName}* 账号 *{username}* 于北京时间 {now_beijing} 登录面板成功！\n\n"
             print(f"{serviceName}账号 {username} 于北京时间 {now_beijing}登录面板成功！")
         else:
-            message += f"❌*{serviceName}*账号 *{username}* 于北京时间 {now_beijing}登录失败\n\n❗请检查*{username}*账号和密码是否正确。\n\n"
-            print(f"{serviceName}账号 {username} 登录失败，请检查{serviceName}账号和密码是否正确。")
+            message += f"❌*{serviceName}*账号 *{username}* 于北京时间 {now_beijing} 登录失败\n\n❗请检查 *{username}* 账号和密码是否正确。\n\n"
+            print(f"{serviceName} 账号 {username} 登录失败，请检查 {serviceName} 账号和密码是否正确。")
 
         delay = random.randint(1000, 8000)
         await delay_time(delay)
@@ -113,9 +113,9 @@ async def send_telegram_message(message):
     formatted_message = f"""
 *🎯 serv00&ct8自动化保号脚本运行报告*
 
-🚨 *如果此通知还在就意味着[serv00-login](https://github.com/yixiu001/serv00-login)脚本还能用*
+🚨 *注意*: 如果此通知还在就意味着[serv00-login](https://github.com/yixiu001/serv00-login)脚本还能用
 
-🎞️ *视频教程*:[自动化批量保号教程](https://www.youtube.com/watch?v=QnlzpvDl_mo&t=674s)
+🎞️ *视频教程*: [自动化批量保号教程](https://www.youtube.com/watch?v=QnlzpvDl_mo&t=674s)
 
 🕰 *北京时间*: {format_to_iso(datetime.utcnow() + timedelta(hours=8))}
 
